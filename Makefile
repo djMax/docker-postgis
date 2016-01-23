@@ -1,4 +1,4 @@
-IMAGENAME = neowaylabs/postgis
+IMAGENAME = djmax/postgis
 
 all: build
 
@@ -10,3 +10,6 @@ clean:
 
 test:
 	docker run --rm -t -i -p 5432:5432 $(IMAGENAME)
+
+publish:
+	docker push $(IMAGENAME)
